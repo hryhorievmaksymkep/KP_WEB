@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        
+        <!--fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&subset=cyrillic&display=swap" rel="stylesheet">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        
+        <!--map-->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+        
+        <title>Blog</title>
+</head>
+<body>
+
+    <!--menu-->
+    <nav class="about-us-nav">   
+        <div class="main-menu">
+            <div id="bg-shadowing" class="hide"></div>
+            <div class="left-nav-panel">
+                <div id="burger" class="bars">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <p class="logo poppins">3lefant</p>
+            </div>
+            <div class="pc-menu hide">
+                <ul>
+                    <li><a href="../index.html" style="color:black">Головна</a></li>
+                    <li><a href="shop.html" class="grey-font">Магазин</a></li>
+                    <li><a href="" class="grey-font">Продукція</a></li>
+                    <li><a href="contacts.html" class="grey-font">Контакти</a></li>
+                </ul>
+            </div>
+    <!--burger-->
+            <div class="phone-menu hide">
+                <div class="phone-menu-top">
+                    <div class="phone-menu-top-logo">
+                        <p class="poppins">3lefant</p>
+                        <i class="fa-solid fa-x burger-menu-close grey-font"></i>
+                    </div>
+                    <div class="phone-menu-top-search">
+                        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <input type="text" placeholder="Шукати">
+                    </div>
+                    <div class="phone-menu-top-menus">
+                        <a href="../index.html">Головна</a>
+                        <a href="shop.html">Магазин</a>
+                        <a href="">Продукція</a>
+                        <a href="contacts.html">Контакти</a>
+                    </div>
+                </div>
+                <div class="phone-menu-bottom">
+                    <div class="phone-menu-bottom-cart">
+                        <p>Кошик</p>
+                        <div class="phone-menu-bottom-cart-count">
+                            <a href="error404.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <div class="cart-count">
+                                <span>0</span>
+                            </div>          
+                        </div>
+                    </div>
+                    <div class="phone-menu-bottom-wishlist">
+                        <p>Вподобане</p>
+                        <div class="phone-menu-bottom-wishlist-count">
+                            <i class="fa-regular fa-heart"></i>
+                            <div class="cart-count">
+                                <span>0</span>
+                            </div>          
+                        </div>
+                    </div>
+                    <a class="phone-menu-sign-in" href="form.html">Зареєструватись</a>
+                    <div class="phone-menu-social-icons">
+                        <a><i class="fa-brands fa-instagram"></i></a>
+                        <a><i class="fa-brands fa-facebook"></i></a>
+                        <a><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="right-nav-panel">
+                <div class="search hide">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="account hide">
+                    <a href="form.html"><i class="fa-solid fa-user"></i></a>
+                </div>
+                <div class="cart-btn">
+                    <a href="error404.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="cart-count">
+                    <span>0</span>
+                </div>                       
+            </div>
+        </div>
+    </nav>
+
+    <!--notification-->
+    <div class="notification">
+        <p class="notification-text"> -30% на всі товари - обмежений час! <a href="shop.html" class="notification-url hide line">Купити зараз -></a></p>
+        <div class="notification-x-mark">
+            <i class="fa-solid fa-x" id="notification-close"></i>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!--contacts header-->
+        <header class="contacts-header">
+            <div class="blog-page-header-path">
+                <p class="grey-font">Головна <i class="fa-solid fa-chevron-right"></i></p>
+                <p>Контакти</p>
+            </div>
+            <h1>
+                Ми віримо у довговічний декор.
+                Ми завзяті, щодо своєї оселі.
+            </h1>
+            <p>
+                Наші вічні меблі з натуральними тканинами,
+                вигнутими лініями, великою кількістю дзеркал
+                і класичним дизайном, які можна вписати в 
+                будь-який проект декору. Вироби зачаровують
+                своєю стриманістю, щоб зберігатися поколіннями,
+                вірними формам кожного періоду, з відтінком сьогодення
+            </p>
+        </header>
+
+        <!--banner section-->
+        <section class="banner-section">
+            <div class="banner-img-placeholder">
+            </div>
+            <div class="banner-content">
+                <p class="quote">Про нас</p>
+                <p>Компанія 3lefant відома на весь світ за своєю якістю та низькими цінами. Est2024</p>
+                <br><br>
+                <a class="banner-button line" href="pages/shop.html">Купити зараз <i class="fa-solid fa-arrow-right"></i></a>
+                <br><br><br><br><br><br><br>
+            </div>
+        </section>
+
+        <!--contact section-->
+        <section class="contact-section">
+            <p class="contact-section-title">Наші контакти</p>
+            <div class="contact-section-info">
+                <div>
+                    <p><i class="fa-solid fa-house"></i></p>
+                    <p class="contact-section-info-title grey-font">Адреса</p>
+                    <p class="contact-section-info-text">Україна, м. Івано-франківськ вул. Вовчинецька 223</p>
+                </div>
+                <div>
+                    <p><i class="fa-solid fa-phone"></i></p>
+                    <p class="contact-section-info-title grey-font">Телефон</p>
+                    <p class="contact-section-info-text"><a>+380678654774</a></p>
+                </div>
+                <div>
+                    <p><i class="fa-regular fa-envelope"></i></p>
+                    <p class="contact-section-info-title grey-font">Електронна пошта</p>
+                    <p class="contact-section-info-text"><a>3lefant@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="contact-section-get-in-touch">
+                <div id="map"></div>
+                <div class="contact-section-get-in-touch-info-container">
+                    <label for="name" class="grey-font">Ім'я</label>
+                    <input type="text" name="name" placeholder="Ваше ім'я" class="grey-font">
+                    <label for="email" class="grey-font" class="grey-font">Email адреса</label>
+                    <input type="email" name="email" placeholder="Ваш email">
+                    <label for="message" class="grey-font" class="grey-font">Ваше повідомлення</label>
+                    <textarea name="message" rows="5" cols="43" placeholder="Ваше повідомлення"></textarea>
+                    <p class="message-btn">Надіслати</p>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+
+
+    <!--info blocks-->
+    <div class="info-blocks">
+        <div class="info-blocks-rows">
+            <div class="info-block">
+                <i class="fa-solid fa-truck info-blocks-icon"></i>
+                <p class="biger-font">Безкоштовна доставка</p>
+                <p class="grey-font smaller-font">Якщо замовлення<br>більше 200₴</p>
+            </div>
+            <div class="info-block">
+                <i class="fa-solid fa-money-bill info-blocks-icon"></i>
+                <p class="biger-font">Повернення коштів</p>
+                <p class="grey-font smaller-font">30 днів<br>гарантії</p>
+            </div>
+        </div>
+        <div class="info-blocks-rows">
+            <div class="info-block">
+                <i class="fa-solid fa-lock info-blocks-icon"></i>
+                <p class="biger-font">Сплачення безпеки</p>
+                <p class="grey-font smaller-font">Безпечне<br>упакування</p>
+            </div>
+            <div class="info-block">
+                <i class="fa-solid fa-phone info-blocks-icon"></i>
+                <p class="biger-font">Підтримка 24/7</p>
+                <p class="grey-font smaller-font">Телефонна та<br>поштова підтримка</p>
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+    <footer class="footer">
+            <div class="footer-upper-bar">
+                <div class="footer-upper-bar-logo-n-slogan">
+                    <p class="footer-logo poppins">3lefant</p>
+                    <div class="footer-upper-bar-line"></div>
+                    <p>Магазин подарунків і декорацій</p>
+                </div>
+                <div class="footer-upper-bar-nav">
+                    <a href="../index.html">Головна</a>
+                    <a href="shop.html">Магазин</a>
+                    <a href="">Продукція</a>
+                    <a href="blog.html">Блог</a>
+                    <a href="contacts.html">Контакти</a>
+                </div>
+            </div>
+            <div class="footer-bottom-bar">
+                <div class="footer-bottom-bar-social-icons">
+                    <a><i class="fa-brands fa-instagram"></i></a>
+                    <a><i class="fa-brands fa-facebook"></i></a>
+                    <a><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <div class="footer-bottom-bar-terms">
+                    <a href="">Privacy Policy</a>
+                    <a href="">Terms of Use</a>
+                </div>
+                <p class="footer-bottom-bar-copyright">Copyright © 2024 3lefant. All rights reserved</p>
+            </div>
+    </footer>
+
+    <!--scripts-->
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/AboutUsMap.js"></script>
+
+</body>
+</html>

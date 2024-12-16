@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&subset=cyrillic&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <title>3lefant</title>
+</head>
+<body>
+
+    <!--menu-->
+    <nav>   
+        <div class="main-menu">
+            <div id="bg-shadowing" class="hide"></div>
+            <div class="left-nav-panel">
+                <div id="burger" class="bars">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <p class="logo poppins">3lefant</p>
+            </div>
+            <div class="pc-menu hide">
+                <ul>
+                    <li><a href="" style="color:black">Головна</a></li>
+                    <li><a href="pages/shop.html" class="grey-font">Магазин</a></li>
+                    <li><a href="" class="grey-font">Продукція</a></li>
+                    <li><a href="pages/contacts.html" class="grey-font">Контакти</a></li>
+                </ul>
+            </div>
+    <!--burger-->
+            <div class="phone-menu hide">
+                <div class="phone-menu-top">
+                    <div class="phone-menu-top-logo">
+                        <p class="poppins">3lefant</p>
+                        <i class="fa-solid fa-x burger-menu-close grey-font"></i>
+                    </div>
+                    <div class="phone-menu-top-search">
+                        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <input type="text" placeholder="Шукати">
+                    </div>
+                    <div class="phone-menu-top-menus">
+                        <a href="">Головна</a>
+                        <a href="pages/shop.html">Магазин</a>
+                        <a href="">Продукція</a>
+                        <a href="pages/contacts.html">Контакти</a>
+                    </div>
+                </div>
+                <div class="phone-menu-bottom">
+                    <div class="phone-menu-bottom-cart">
+                        <p>Кошик</p>
+                        <div class="phone-menu-bottom-cart-count">
+                            <a href="pages/error404.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <div class="cart-count">
+                                <span>0</span>
+                            </div>          
+                        </div>
+                    </div>
+                    <div class="phone-menu-bottom-wishlist">
+                        <p>Вподобане</p>
+                        <div class="phone-menu-bottom-wishlist-count">
+                            <i class="fa-regular fa-heart"></i>
+                            <div class="cart-count">
+                                <span>0</span>
+                            </div>          
+                        </div>
+                    </div>
+                    <a class="phone-menu-sign-in" href="pages/form.html">Зареєструватись</a>
+                    <div class="phone-menu-social-icons">
+                        <a><i class="fa-brands fa-instagram"></i></a>
+                        <a><i class="fa-brands fa-facebook"></i></a>
+                        <a><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="right-nav-panel">
+                <div class="search hide">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="account hide">
+                    <a href="pages/form.html"><i class="fa-solid fa-user"></i></a>
+                </div>
+                <div class="cart-btn">
+                    <a href="pages/error404.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="cart-count">
+                    <span>0</span>
+                </div>                       
+            </div>
+        </div>
+    </nav>
+
+    <!--notification-->
+    <div class="notification">
+        <p class="notification-text"> -30% на всі товари - обмежений час! <a href="pages/shop.html" class="notification-url hide line">Купити зараз -></a></p>
+        <div class="notification-x-mark">
+            <i class="fa-solid fa-x" id="notification-close"></i>
+        </div>
+    </div>
+
+    <!--slider section-->
+    <section class="slider-section">
+        <div class="slider" id="slider-img-placeholder">
+        </div>
+        <div class="slider-nav-dots">
+            <div id="slider-nav-dot-1"></div><div id="slider-nav-dot-2"></div><div id="slider-nav-dot-3"></div>
+        </div>
+        <div class="header">
+            <h1 class="quote poppins">
+                <span>Simply Unique</span><span class="grey-font">/</span><br>
+                <span>Simply Better</span><span class="grey-font">.</span>
+            </h1>
+            <p class="short-info">3lefant <span class="grey-font">- це магазин декорацій та подарунків з України.</span></p>
+        </div>
+        <div class="slider-nav-btns">
+            <button id="left-slider-nav-btn"><i class="fa-solid fa-arrow-left"></i></button>
+            <button id="right-slider-nav-btn"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </section>
+    
+    <!--banner section-->
+    <section class="banner-grid">
+        <div class="livingroom-banner">
+            <div class="livingroom-banner-content">
+                <div class="banner-text cyrrilic">
+                    <p>Вітальня</p>
+                </div>
+                <div class="banner-button line">
+                    <a href="pages/shop.html">Купити зараз <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="small-banners">
+            <div class="bedroom-banner">
+                <div class="bedroom-banner-content">
+                    <div class="banner-text cyrrilic">
+                        <p>Спальня</p>
+                    </div>
+                    <div class="banner-button line">
+                        <a href="pages/shop.html">Купити зараз <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="kitchen-banner">
+                <div class="kitchen-banner-content">
+                    <div class="banner-text cyrrilic">
+                        <p>Кухня</p>
+                    </div>
+                    <div class="banner-button line">
+                        <a href="pages/shop.html">Купити зараз <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--carousel section-->
+    <section class="carousel-section">
+        <div class="carousel-section-title">
+            <div class="cyrriliс quote">
+                <p>Нові</p>
+                <p>Товари</p>
+            </div>
+            <a class="carousel-button-pc line" href="pages/shop.html">Більше товарів <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="carousel-section-product-card">
+            <div class="element">
+                <div class="element-card">
+                    <div class="element-card-budges">
+                        <p class="element-card-budges-new">НОВЕ</p>
+                        <p class="element-card-budges-sale">-50%</p>
+                    </div>
+                    <div class="element-card-favourite">
+                        <div class="unliked">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class=" liked hide">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="element-card-button-hover">
+                        <p>Додати до кошика</p>
+                    </div>
+                </div>
+                <div class="element-content">
+                    <p class="element-content-stars"></p>
+                    <p class="element-content-name"></p>
+                    <p class="element-content-prices">
+                        <span class="element-content-new-price"></span>
+                        <span class="element-content-old-price grey-font"></span>
+                    </p>
+                </div>
+            </div>
+            <div class="element">
+                <div class="element-card">
+                    <div class="element-card-budges">
+                        <p class="element-card-budges-new">НОВЕ</p>
+                        <p class="element-card-budges-sale">-50%</p>
+                    </div>
+                    <div class="element-card-favourite">
+                        <div class="unliked">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="hide liked">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="element-card-button-hover">
+                        <p>Додати до кошика</p>
+                    </div>
+                </div>
+                <div class="element-content">
+                    <p class="element-content-stars"></p>
+                    <p class="element-content-name"></p>
+                    <p class="element-content-prices">
+                        <span class="element-content-new-price"></span>
+                        <span class="element-content-old-price grey-font"></span>
+                    </p>
+                </div>
+            </div>
+            <div class="element">
+                <div class="element-card">
+                    <div class="element-card-budges">
+                        <p class="element-card-budges-new">НОВЕ</p>
+                        <p class="element-card-budges-sale">-50%</p>
+                    </div>
+                    <div class="element-card-favourite">
+                        <div class="unliked">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="hide liked">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="element-card-button-hover">
+                        <p>Додати до кошика</p>
+                    </div>
+                </div>
+                <div class="element-content">
+                    <p class="element-content-stars"></p>
+                    <p class="element-content-name"></p>
+                    <p class="element-content-prices"> 
+                        <span class="element-content-new-price"></span>
+                        <span class="element-content-old-price grey-font"></span>
+                    </p>
+                </div>
+            </div>
+            <div class="element">
+                <div class="element-card">
+                    <div class="element-card-budges">
+                        <p class="element-card-budges-new">НОВЕ</p>
+                        <p class="element-card-budges-sale">-50%</p>
+                    </div>
+                    <div class="element-card-favourite">
+                        <div class="unliked">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="hide liked">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="element-card-button-hover">
+                        <p>Додати до кошика</p>
+                    </div>
+                </div>
+                <div class="element-content">
+                    <p class="element-content-stars"></p>
+                    <p class="element-content-name"></p>
+                    <p class="element-content-prices">
+                        <span class="element-content-new-price"></span>
+                        <span class="element-content-old-price grey-font"></span>
+                    </p>
+                </div>
+            </div>
+            <div class="element">
+                <div class="element-card">
+                    <div class="element-card-budges">
+                        <p class="element-card-budges-new">НОВЕ</p>
+                        <p class="element-card-budges-sale">-50%</p>
+                    </div>
+                    <div class="element-card-favourite">
+                        <div class="unliked">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="hide liked">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="element-card-button-hover">
+                        <p>Додати до кошика</p>
+                    </div>
+                </div>
+                <div class="element-content">
+                    <p class="element-content-stars"></p>
+                    <p class="element-content-name"></p>
+                    <p class="element-content-prices">
+                        <span class="element-content-new-price"></span>
+                        <span class="element-content-old-price grey-font"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-section-button">
+            <a class="carousel-button line">Більше товарів <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!--info blocks-->
+    <div class="info-blocks">
+        <div class="info-blocks-rows">
+            <div class="info-block">
+                <i class="fa-solid fa-truck info-blocks-icon"></i>
+                <p class="biger-font">Безкоштовна доставка</p>
+                <p class="grey-font smaller-font">Якщо замовлення<br>більше 200₴</p>
+            </div>
+            <div class="info-block">
+                <i class="fa-solid fa-money-bill info-blocks-icon"></i>
+                <p class="biger-font">Повернення коштів</p>
+                <p class="grey-font smaller-font">30 днів<br>гарантії</p>
+            </div>
+        </div>
+        <div class="info-blocks-rows">
+            <div class="info-block">
+                <i class="fa-solid fa-lock info-blocks-icon"></i>
+                <p class="biger-font">Сплачення безпеки</p>
+                <p class="grey-font smaller-font">Безпечне<br>упакування</p>
+            </div>
+            <div class="info-block">
+                <i class="fa-solid fa-phone info-blocks-icon"></i>
+                <p class="biger-font">Підтримка 24/7</p>
+                <p class="grey-font smaller-font">Телефонна та<br>поштова підтримка</p>
+            </div>
+        </div>
+    </div>
+
+    <!--banner section-->
+    <section class="banner-section">
+        <div class="banner-img-placeholder">
+        </div>
+        <div class="banner-content">
+            <p class="banner-content-sale">ЗНИЖКИ ДО -35%</p>
+            <p class="quote">Сотні<br>Низьких цін</p>
+            <p>Зробити стильний вигляд кожній кімнаті у вашому будинку дешево як ніколи</p>
+            <br><br>
+            <a class="banner-button line" href="pages/shop.html">Купити зараз <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!--articles-->
+    <article class="articles">
+        <div class="articles-title">
+            <p class="quote">Статті</p>
+            <a class="banner-button line" href="pages/blog.html">Читати більше <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="articles-elements">
+            <div class="articles-element">
+                <img class="articles-element-img-placeholder" src="styles/imgs/article_section_img1.jpg" alt="кімната">
+                <p class="articles-element-title">7 способів декору кімнати</p>
+                <span><a class="banner-button line" href="pages/blog.html">Читати більше <i class="fa-solid fa-arrow-right"></i></a></span>
+            </div>
+            <div class="articles-element">
+                <img class="articles-element-img-placeholder" src="styles/imgs/article_section_img2.jpg" alt="кухня">
+                <p class="articles-element-title">Організація кухні</p>
+                <span><a class="banner-button line" href="pages/blog.html">Читати більше <i class="fa-solid fa-arrow-right"></i></a></span>
+            </div>
+            <div class="articles-element">
+                <img class="articles-element-img-placeholder" src="styles/imgs/article_section_img3.jpg" alt="спальня">
+                <p class="articles-element-title">Задекоруйте вашу спальню</p>
+                <span><a class="banner-button line" href="pages/blog.html">Читати більше <i class="fa-solid fa-arrow-right"></i></a></span>
+            </div>
+        </div>
+    </article>
+
+    <!--newsletter signup-->
+    <section class="newsletter-signup">
+        <div class="newsletter-signup-content">
+            <p class="newsletter-signup-big-text poppins">Приєднуйтесь до новин</p>
+            <p class="newsletter-signup-text">Пропозиції, нова продукція та інше</p>
+        </div>
+        <form class="newsletter-signup-form">
+            <span><i class="fa-regular fa-envelope"></i></span>
+            <input type="email" placeholder="Email адреса" autocomplete="email">
+            <button onclick="alert('Запит на розсилку надіслано\nдякуємо, що ви з нами')">Зареєструвати</button>
+        </form>
+    </section>
+
+    <!--footer-->
+    <footer class="footer">
+        <div class="footer-upper-bar">
+            <div class="footer-upper-bar-logo-n-slogan">
+                <p class="footer-logo poppins">3lefant</p>
+                <div class="footer-upper-bar-line"></div>
+                <p>Магазин подарунків і декорацій</p>
+            </div>
+            <div class="footer-upper-bar-nav">
+                <a href="">Головна</a>
+                <a href="pages/shop.html">Магазин</a>
+                <a href="">Продукція</a>
+                <a href="pages/blog.html">Блог</a>
+                <a href="pages/contacts.html">Контакти</a>
+            </div>
+        </div>
+        <div class="footer-bottom-bar">
+            <div class="footer-bottom-bar-social-icons">
+                <a><i class="fa-brands fa-instagram"></i></a>
+                <a><i class="fa-brands fa-facebook"></i></a>
+                <a><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="footer-bottom-bar-terms">
+                <a href="">Privacy Policy</a>
+                <a href="">Terms of Use</a>
+            </div>
+            <p class="footer-bottom-bar-copyright">Copyright © 2024 3lefant. All rights reserved</p>
+        </div>
+    </footer>
+
+    <!--scripts-->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/slider.js"></script>
+    <script src="scripts/carousel.js"></script>
+    <script src="scripts/like.js"></script>
+</body>
+</html>
